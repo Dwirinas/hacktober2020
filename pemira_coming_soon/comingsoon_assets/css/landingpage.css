@@ -1,0 +1,129 @@
+/* START FONT */
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local('Product Sans'), url('../../comingsoon_assets/fonts/product-sans/ProductSans-Regular.woff') format('woff');
+}
+
+/* END FONT */
+
+/* START COLOR THEME */
+:root {
+    --color-theme-primary: #6200ee !important;
+}
+
+/* END COLOR THEME */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Product Sans", Verdana, Helvetica, Sans-Serif !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--color-theme-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    cursor: pointer;
+    border-radius: 50%;
+    height: 280px;
+    width: 280px;
+    border: #f5f5f5 1px solid;
+    background-color: #f5f5f5;
+    padding: 5px;
+    box-shadow: 0 0 18px 0 rgba(0, 0, 0, .12);
+    transition: .4s;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    background-color: white;
+    border: whitesmoke solid 20px;
+}
+
+.circle:hover .img-logo {
+    display: initial;
+}
+
+.circle:hover .txt-subtitle {
+    display: none;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-title {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p {
+    width: 100%;
+    color: var(--color-theme-primary);
+}
+
+.txt-title {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.txt-subtitle {
+    font-size: 2.2em;
+    text-align: center;
+    color: #424242;
+}
+
+.txt-subtitle,
+.img-logo {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.img-logo {
+    display: none;
+    width: 200px;
+    height: 150px;
+}
+
+/* START TRANSITION */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* END TRANSITION */
